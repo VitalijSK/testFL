@@ -1,0 +1,10 @@
+<form *ngIf="todoForm" [formGroup]="todoForm" (ngSubmit)="onSubmit($event)" novalidate [ngClass]="'ui form'">
+  <div [ngClass]="'field'">
+      <label> Title: </label>
+      <div [ngClass]="'ui icon input'" [class.loading]="todoForm.controls['title'].pending">
+          <input type="text" formControlName="title">
+          <i [ngClass]="'icon'" [class.check]="checkValid('title')" [class.close]="checkInvalid('title')"></i>
+      </div>
+  </div>
+  <button type="submit" [disabled]="!todoForm.valid" [ngClass]="'ui inverted violet button'">Submit</button>
+</form>

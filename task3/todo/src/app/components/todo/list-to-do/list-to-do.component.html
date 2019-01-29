@@ -1,0 +1,3 @@
+<div class="list" >
+  <app-element-to-do *ngFor="let element of todo; trackBy: trackByFn" [todo]="element" (deleteId)="deleteToDoId($event)"></app-element-to-do>
+</div>

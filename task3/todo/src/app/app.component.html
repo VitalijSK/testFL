@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to test!
+  </h1>
+</div>
+<section class="listContainer" [class.loading]="loading">
+  <h2>List: </h2>
+  <app-form-to-do (addToDo)="addToDo($event)"></app-form-to-do>
+  <app-list-to-do (deleteToDo)="deleteToDo($event)" [todo]="todo$ | async">
+  </app-list-to-do>
+</section>
+
+
